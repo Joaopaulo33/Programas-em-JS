@@ -20,6 +20,7 @@ function fizzBuzz(numero){
                 }else{
                     return 'Não é um número';
                 }
+                Math.r
             }
         }
     }
