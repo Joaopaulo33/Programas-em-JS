@@ -17,8 +17,8 @@ h1{
     text-align: center;
     font-family: "EB Garamond";
     margin:0px
-
 }
+
 
 h2{ 
     text-align: left;
@@ -32,12 +32,12 @@ header{
     border-radius: 6px;
     box-shadow:2px 2px 2px rgba(0, 0, 0, 0.322);
     margin-bottom: 8px;
+    padding-bottom: 15px;
 }
 
 header>h1{
-    padding-top: 10px;
     margin-bottom: 25px;
-
+    padding-top: 20px;
     
 }
 
@@ -52,10 +52,10 @@ header>nav{
     
 }
 
-a>nav{
-    padding-right: 12px;
+a{
+    padding-right: 10px;
     text-decoration: none; 
-    color: blue;
+    color: rgb(7, 87, 31);
     height:bold;
 }
 
@@ -66,7 +66,7 @@ a:hover{
 
 
 #conteudos{
-    padding:10px;
+    padding: 13px;
     margin: 5px;
     background-color: white;
     box-shadow:2px 2px 4px rgba(0, 0, 0, 0.253);
@@ -79,8 +79,12 @@ a:hover{
     width: 700px;
 }
 #conteudos>p{
-    margin-bottom: 60px;
     line-height: 25px;
+}
+
+.paragrafomeio{
+    margin-bottom: 60px;
+
 }
 
 #conteudos>a{

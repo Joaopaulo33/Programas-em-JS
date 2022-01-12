@@ -75,3 +75,44 @@ const combinado = primeiros.concat(segundos);
 const cortado = combinado.slice(1,3); // nao vai até o ultimo (vai até ultimo -1)
 
 console.log(cortado);
+
+
+
+//OUTRA FORMA
+const combinado2= [...primeiros,...segundos];//[...primeiros,"a",...segundos,"b"] -> também pode
+
+console.log(combinado2,"comb");
+
+
+
+
+//Percorrer o array
+const numeross = [1,2,3,4,5];
+//Primeira forma
+for(numerox of numeross){
+    //console.log(numerox)
+}
+
+//Segunda forma
+numeross.forEach(function(numero){
+//console.log(numero);
+})
+    //segunda forma reduzida
+    numeross.forEach((numerox) => console.log(numerox));
+
+//colocando o índice também
+numeross.forEach(function(numero,indice){
+    console.log(numero,indice);
+})
+
+
+
+
+//Combinando com outros caracteres
+
+const combinad = numeross.join('.'); // retorna 1.2.3.4.5
+
+
+const frase = "Olá bem vindo";
+const resultado = frase.split(" "); // retorna um array com as palavras
+console.log(resultado);
