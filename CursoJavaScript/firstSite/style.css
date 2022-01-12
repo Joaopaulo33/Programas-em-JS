@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2? family= EB+Garamond & family= Kaushan+Script & family= Work+Sans:ital,wght@0,200;0,300;0,400; 0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900 & display=swap');
+
+
+
+body{
+    background-color: rgb(185, 236, 231);
+    text-align: justify;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: "EB Garamond";
+    margin:0px
+
+}
+
+h2{ 
+    text-align: left;
+    color: rgba(226, 106, 59, 0.842);
+
+}
+
+header{
+    background-image: linear-gradient(to right, #59adb6,#45ad7d);
+    height: 170px;
+    border-radius: 6px;
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.322);
+    margin-bottom: 8px;
+}
+
+header>h1{
+    padding-top: 10px;
+    margin-bottom: 25px;
+
+    
+}
+
+header>p{
+    text-align: center;
+    color:rgba(247, 241, 241, 0.822);
+    margin-bottom: 36px;
+}
+
+header>nav{
+    margin-left: 10px;
+    
+}
+
+a>nav{
+    padding-right: 12px;
+    text-decoration: none; 
+    color: blue;
+    height:bold;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(221, 100, 19);
+}
+
+
+#conteudos{
+    padding:10px;
+    margin: 5px;
+    background-color: white;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.253);
+    border-radius: 5px;
+}
+
+#conteudos{
+    margin-top: auto;
+    margin: auto;
+    width: 700px;
+}
+#conteudos>p{
+    margin-bottom: 60px;
+    line-height: 25px;
+}
+
+#conteudos>a{
+    color: black;
+
+}
+
