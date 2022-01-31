@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="javascript">
+
+ /*Objetivo
+ - Calcular o salário líquido de um funcinário horista
+ ->Informações necessárias
+        -Horas trabalhadas no mês(htm)
+        -Valor da hora de trabalho(vht)
+        -Desconto inss (dInss)
+->informar a classificação salarial
+->utilizar
+        entrada: windown.prompt
+        saída: document.write
+ */
+
+
+    /*Definição de variáveis*/
+    //Variáveis de entrada
+    var pInss; // Porcentagem de desconto do inss
+    var htm; //Horas trabalhadas no mês
+    var vht; //Valor hora trabalhada
+    //Variáveis de saída
+    var salB; //Salário bruto
+    var salLQ; // Salário líquido
+    var desc; //Descontos
+    
+
+
+
+
+//Entrada de dados
+
+htm = parseFloat(window.prompt('informe quantas horas você trabalhou nesse mês'));
+pInss= parseFloat(window.prompt('Qual é a porcentagem de desconto do inss?'));
+vht = parseFloat(window.prompt('Qual o valor da hora trabalhada?'));
+
+
+//Tratamento de dados
+
+    //definindo salário bruto
+    salB = htm * vht;
+
+    desc = salB * (pInss/100);
+
+    salLQ = salB - desc;
+
+
+
+// Saída de dados
+
+document.write('Quantindade de horas trabalhadas(135 - 180)=> <b>',htm,' horas</b>');
+
+if(htm>180){
+    document.write('<b>(Você excedeu o número de horas mensais)</b>');
+}else {
+    if(htm<135){
+        document.write('<p><b>(Valor mínimo de horas mensais inválido)</b>');
+    }
+}
+
+
+
+//Valor hora trabalhada 
+document.write('<p> Valor da hora trabalhada(25 à 50) = <b>'+ vht +' reais</b>');
+
+if (vht>50){
+    document.write('<p><b> (O valor máximo da hora trabalhada foi excedido)<b>');
+}else{
+    if(vht<25){
+        document.write('<p><b>(O valor mínimo da hora trabalhada mensalmente não foi alcançado)</b>');
+    }
+}
+
+
+
+//Percentual INSS
+document.write('<p>Percentual de desconto INSS (5 a 15) =><b>' + pInss + ' porcento</b>');
+
+if(pInss>15){
+    document.write('<p>(<b>Percentual máximo do INSS excedido</b>');
+}else{
+    if(pInss<5){
+        document.write('<p><b> O Percentual mínimo do INSS não foi atingido<b>');
+    }
+}
+
+document.write('<p>======================================================================');
+document.write('<p><b> Salário Bruto = </b>'+ salB);
+document.write('<p><b>Total de desconto INSS = </b>' +desc);
+document.write('<p><b>Salário líquido = </b>'+ salLQ+ ' ')
+
+
+// Classificação do salário
+if(salLQ > 10500){
+    document('<b>(Salário elevado!</b>maior que 10500)')
+}else{
+    if(salLQ>6000){
+        document.write('<b>(Salário satisfatório! ... </b>' + ' maior do que 6000)')
+    }else{
+        if(salLQ>3000){
+            document.write('<b>(Salário moderado! ... </b>' + ' maior do que 3000)')
+        }else{
+            document.write('<b>(Salário insatisfatório! ... </b>' + ' menor do que 3000)')
+        }
+    }
+}
+
+</script>
+</body>
+</html>
