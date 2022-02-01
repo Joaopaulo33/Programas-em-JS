@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: #08a9e9;
+            font: normal 14pt arial;
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        h1{
+            color: white;
+        }
+        section#principal{
+            background-color: white;
+            padding: 10px;
+           width: 25%;
+           height: 25%;
+           border-radius: 6px;
+           box-shadow: 1px 1px 3px black;
+        }
+        input{
+            margin: 5px;
+        }
+        input#fim{
+            margin-left: 15px;
+        }
+        input#passo{
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Vamos contar</h1>
+    </header>
+    <section id="principal">
+       <div>
+           
+                    <label for="inicio"> Inicio:</label>
+                        <input type="number" name="inicio" id="inicio">
+                        <br>
+                    <label for="fim">Fim:</label>
+                        <input type="number" name="fim" id="fim">
+                        <br>
+                    <label for="passo">Passo:</label>
+                        <input type="number" name="passo" id="passo">
+                        <br>
+                        <input type="button" value="Contar" onclick="contar()">
+                        <p id="valores"></p>
+       </div>
+    </section>
+
+    <script>
+        var tInicio = window.document.getElementById('inicio')
+        var tFim = window.document.getElementById('fim')
+        var tPasso = window.document.getElementById('passo')
+        var tValores = window.document.getElementById('valores')
+        
+
+        tValores.innerText="Preparando para contar..."
+       
+        
+    function contar(){
+        tValores.innerText=""
+        var nInicio = Number(tInicio.value)
+        var nFim = Number(tFim.value)
+        var nPasso = Number(tPasso.value)
+        console.log(nInicio)
+
+        if(nPasso > 0){     
+            if(nInicio<nFim){
+                    for(var i=nInicio; i<=nFim; i+=nPasso){
+                    tValores.innerText+= "-"+ i
+                    }
+            }else{
+                    tValores.innerText="O inicio tem que ser menor que o fim"
+                }    
+        }  
+    }
+
+    </script>
+</body>
+</html>
