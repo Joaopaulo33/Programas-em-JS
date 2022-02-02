@@ -12,7 +12,6 @@
             font: normal 14pt arial;
             width: 100%;
             height: 100%;
-            
         }
 
         h1{
@@ -35,7 +34,7 @@
         input#passo{
             margin-left: 5px;
             margin-bottom: 5px;
-        }
+        }   
   
     </style>
 </head>
@@ -44,33 +43,40 @@
         <h1> Vamos contar</h1>
     </header>
     <section id="principal">
-       <div>
+        <div>
            
-                    <label for="inicio"> Inicio:</label>
-                        <input type="number" name="inicio" id="inicio">
-                        <br>
-                    <label for="fim">Fim:</label>
-                        <input type="number" name="fim" id="fim">
-                        <br>
-                    <label for="passo">Passo:</label>
-                        <input type="number" name="passo" id="passo">
-                        <br>
-                        <input type="button" value="Contar" onclick="contar()">
-                        <p id="valores"></p>
-       </div>
-    </section>
+            <label for="inicio"> Inicio:</label>
+                <input type="number" name="inicio" id="inicio">
+                <br>
+            <label for="fim">Fim:</label>
+                <input type="number" name="fim" id="fim">
+                <br>
+            <label for="passo">Passo:</label>
+                <input type="number" name="passo" id="passo">
+                <br>
+            <input type="button" value="Contar" onclick="contar()">
+            <p id="wait"></p>
+            <p id="valores"></p>
 
+        </div>
+    </section>
+    <footer>
+        João Paulo Cardoso
+    </footer>
     <script>
         var tInicio = window.document.getElementById('inicio')
         var tFim = window.document.getElementById('fim')
         var tPasso = window.document.getElementById('passo')
         var tValores = window.document.getElementById('valores')
+        var tWait = window.document.getElementById('wait')
         
 
-        tValores.innerText="Preparando para contar..."
+        tWait.innerText="Preparando a contagem..."
+
        
         
     function contar(){
+        tWait.innerText="Contando:"
         tValores.innerText=""
         var nInicio = Number(tInicio.value)
         var nFim = Number(tFim.value)
@@ -80,7 +86,13 @@
         if(nPasso > 0){     
             if(nInicio<nFim){
                     for(var i=nInicio; i<=nFim; i+=nPasso){
-                    tValores.innerText+= "-"+ i
+                    if(i==nInicio){
+                        tValores.innerText+= i
+                    }else if(i==nFim){
+                        tValores.innerText+= String.fromCodePoint(0x1F449)+i+String.fromCodePoint(0x1F3C1)
+                    }else{
+                        tValores.innerText+= String.fromCodePoint(0x1F449)+ i 
+                    }
                     }
             }else{
                     tValores.innerText="O inicio tem que ser menor que o fim"

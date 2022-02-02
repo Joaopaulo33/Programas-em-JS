@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: turquoise;
+            color: white;
+        }
+        header{
+            margin-left: 100px; 
+        }
+        section#principal{
+           margin-left: 100px; 
+        }
+       
+        #div1{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>  
+        <h1>Tabuada:</h1>
+    </header>
+    <section id="principal">
+        <div id="div1">
+        <p>Número: <input type="number" name="num" id="txtnum"></p>
+            <input type="button" onclick="gerarTabuada()" value="Gerar tabuada">
+            <br>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option >Digite um número acima</option>
+            </select>
+        </div>
+    </section>
+    <script>
+        var tab = window.document.getElementById('seltab')
+    
+
+      
+      
+       
+      function gerarTabuada(){  
+
+        var num = document.getElementById('txtnum')
+        tab.innerText=''
+        var n = Number(num.value)
+          var x=1;
+          console.log(n)
+        while(x<=10){
+           let item = document.createElement('option')
+           item.text= `${n} x ${x} = ${n*x}`
+           item.value=`tab${c}`
+       
+           //adcionar um elemento filho
+           tab.appendChild(item)
+           x++;
+       }}
+    </script>
+</body>
+</html>
